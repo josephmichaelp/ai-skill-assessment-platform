@@ -24,10 +24,10 @@ function getScoreStatus(score: number): 'success' | 'warning' | 'error' {
   return 'error';
 }
 
-function getScoreColor(score: number): string {
-  if (score >= 80) return '#037f0c';
-  if (score >= 60) return '#d97706';
-  return '#d91515';
+function getScoreColor(score: number): 'text-status-success' | 'text-status-warning' | 'text-status-error' {
+  if (score >= 80) return 'text-status-success';
+  if (score >= 60) return 'text-status-warning';
+  return 'text-status-error';
 }
 
 export default function AssessmentResultPage() {
