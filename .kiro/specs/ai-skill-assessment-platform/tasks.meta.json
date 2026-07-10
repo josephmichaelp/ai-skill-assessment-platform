@@ -1,0 +1,942 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Initialize Amplify Gen 2 project with Next.js 14 (App Router)": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651922987
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651950875
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783656845871
+      }
+    ],
+    "1.2 Configure Next.js App Router with i18n (next-intl)": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651923626
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783656858505
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783657066668
+      }
+    ],
+    "1.3 Set up project structure and shared TypeScript interfaces": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651923869
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783657076696
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783657426741
+      }
+    ],
+    "2.1 Define DynamoDB table resource": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651924037
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783657444313
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783657958051
+      }
+    ],
+    "2.2 Define Amazon Cognito auth resource": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651924176
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783657968664
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783658342751
+      }
+    ],
+    "2.3 Define S3 storage resource": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651924485
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783658352632
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783658529587
+      }
+    ],
+    "2.4 Define Lambda function resources": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651924789
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783658535989
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783658832412
+      }
+    ],
+    "2.5 Define API Gateway REST endpoints": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651924960
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783658845859
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783659134030
+      }
+    ],
+    "2.6 Define WebSocket API for roleplay streaming": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651925124
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783659140620
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783659382348
+      }
+    ],
+    "3. Checkpoint - Verify infrastructure deploys": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651925357
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783659388275
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660149329
+      }
+    ],
+    "4.1 Implement Bedrock Integration Layer": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651925523
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660160847
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660414420
+      }
+    ],
+    "4.3 Implement auth helper utilities": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651925716
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660448839
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660699675
+      }
+    ],
+    "4.5 Implement DynamoDB helper utilities": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651925929
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660455263
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660705630
+      }
+    ],
+    "4.7 Implement request validation utilities": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651926041
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660461132
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660711351
+      }
+    ],
+    "4.9 Implement response formatting and error handling utilities": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651926215
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660467347
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660717641
+      }
+    ],
+    "5. Checkpoint - Shared utilities complete": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651926345
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660725367
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660732173
+      }
+    ],
+    "6.1 Implement user profile and management endpoints": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651926447
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660739439
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661032588
+      }
+    ],
+    "6.2 Implement position management endpoints": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651926582
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660745360
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661038436
+      }
+    ],
+    "6.3 Implement token usage dashboard endpoint": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651926725
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661066103
+      }
+    ],
+    "6.4 Implement token usage monitoring dashboard endpoints": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651926910
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661071821
+      }
+    ],
+    "7.1 Implement quiz generation endpoint": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651927032
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660751319
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661044717
+      }
+    ],
+    "7.2 Implement quiz submission and evaluation endpoint": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651927175
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661078414
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661581995
+      }
+    ],
+    "7.3 Implement assessment history and gap analysis endpoints": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651927333
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661084953
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661588642
+      }
+    ],
+    "8.1 Implement roleplay session management": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651927435
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660757679
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661051255
+      }
+    ],
+    "8.2 Implement roleplay message handling with streaming": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651927538
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661091331
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661594662
+      }
+    ],
+    "8.3 Implement roleplay session end and evaluation": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651927637
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661607323
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661809372
+      }
+    ],
+    "9.1 Implement document upload and review endpoints": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651927778
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660762975
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661056804
+      }
+    ],
+    "10.1 Implement promotion scorecard and history endpoints": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651927907
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661600254
+      }
+    ],
+    "11.1 Implement performance summary generation": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651928027
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661614194
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661817823
+      }
+    ],
+    "12. Checkpoint - All backend Lambda handlers complete": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651928174
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661833997
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661842815
+      }
+    ],
+    "13.1 Implement authentication flow": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651928340
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661851003
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662492533
+      }
+    ],
+    "13.2 Implement main layout and navigation": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651928441
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661856863
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662499613
+      }
+    ],
+    "14.1 Implement dashboard page": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651928540
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661863261
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662513469
+      }
+    ],
+    "15.1 Implement assessment list and history page": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651928673
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661871321
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662522151
+      }
+    ],
+    "15.2 Implement new assessment form and quiz interface": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651928840
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661878922
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662529700
+      }
+    ],
+    "15.3 Implement assessment results page with gap analysis": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651928993
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662546013
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662926754
+      }
+    ],
+    "16.1 Implement roleplay scenario selector": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651929128
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662554534
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662933517
+      }
+    ],
+    "16.2 Implement roleplay chat interface with streaming": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651929331
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662562629
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662939695
+      }
+    ],
+    "16.3 Implement roleplay evaluation display": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651929454
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662569880
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662946733
+      }
+    ],
+    "17.1 Implement assignment upload and review pages": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651929594
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662577530
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662954557
+      }
+    ],
+    "18.1 Implement promotion scorecard page": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651929809
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662970866
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663434774
+      }
+    ],
+    "18.2 Implement performance summary page": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651929925
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662978567
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663441794
+      }
+    ],
+    "19.1 Implement admin user management page": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651930025
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662986433
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663448216
+      }
+    ],
+    "19.2 Implement admin position configuration page": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651930155
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662993994
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663456286
+      }
+    ],
+    "19.3 Implement admin token usage monitoring dashboard": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651930335
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663000297
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663464281
+      }
+    ],
+    "20. Checkpoint - Frontend pages complete": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651930462
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663472653
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663479611
+      }
+    ],
+    "21.1 Wire frontend API calls to backend endpoints": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651930612
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663486604
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663798781
+      }
+    ],
+    "21.2 Implement audit logging in backend handlers": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651930791
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663494298
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663807541
+      }
+    ],
+    "22. Final checkpoint - Full system verification": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783651930881
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663814996
+      },
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663821304
+      }
+    ],
+    "1. Project scaffolding and dependency setup": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783657426843
+      }
+    ],
+    "2. Infrastructure definitions (Amplify Gen 2 backend)": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783659382424
+      }
+    ],
+    "4. Shared utilities (backend)": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783660717732
+      }
+    ],
+    "9. Implement assignment-handler Lambda": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661056938
+      }
+    ],
+    "7. Implement assessment-handler Lambda": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661588762
+      }
+    ],
+    "10. Implement promotion-handler Lambda": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661600426
+      }
+    ],
+    "8. Implement roleplay-handler Lambda": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661809507
+      }
+    ],
+    "11. Implement performance-handler Lambda": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783661817977
+      }
+    ],
+    "13. Frontend - Auth and layout": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662499728
+      }
+    ],
+    "14. Frontend - Dashboard": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662513600
+      }
+    ],
+    "15. Frontend - Assessment module": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662926928
+      }
+    ],
+    "16. Frontend - Roleplay module": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662946829
+      }
+    ],
+    "17. Frontend - Assignment module": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783662954651
+      }
+    ],
+    "18. Frontend - Promotion and Performance modules": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663441915
+      }
+    ],
+    "19. Frontend - Admin panel": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663464396
+      }
+    ],
+    "21. Integration and end-to-end wiring": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663807772
+      }
+    ],
+    "6. Implement user-handler Lambda": [
+      {
+        "executionId": "7af77a1e-64f1-482e-a0cb-3e55dd621c2a",
+        "chatSessionId": "sess_c8d4e404-ee16-4f1f-aa37-57bc1c4e6532",
+        "timestamp": 1783663853254
+      }
+    ]
+  }
+}
