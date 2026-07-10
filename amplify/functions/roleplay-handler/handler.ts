@@ -34,9 +34,21 @@ async function getWsClientModule() {
   return wsClientModule;
 }
 
-// ─── WebSocket Callback URL ────────────────────────────────────────────────────
+// ─── WebSocket Callback Endpoint ───────────────────────────────────────────────
 
-const WEBSOCKET_CALLBACK_URL = process.env.WEBSOCKET_CALLBACK_URL || '';
+/**
+ * Derive the API Gateway Management API endpoint from a WebSocket event's
+ * requestContext. This avoids needing a WEBSOCKET_CALLBACK_URL env var (which
+ * would create a CloudFormation circular dependency between the Functions and
+ * WebSocket API stacks).
+ */
+function getWsEndpoint(event: APIGatewayProxyEvent): string {
+  const ctx = event.requestContext as unknown as { domainName?: string; stage?: string };
+  if (!ctx.domainName || !ctx.stage) {
+    return '';
+  }
+  return `https://${ctx.domainName}/${ctx.stage}`;
+}
 
 // ─── Main Handler (Router) ─────────────────────────────────────────────────────
 
@@ -345,20 +357,23 @@ async function handleWebSocketDisconnect(connectionId: string): Promise<APIGatew
  * Requirements: 4.2, 4.3, 11.5
  */
 async function handleWebSocketMessage(connectionId: string, event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> {
+  // Derive the @connections endpoint from the event's requestContext
+  const endpoint = getWsEndpoint(event);
+
   // 1. Parse the message body
   let messageBody: { sessionId: string; message: string; orgId: string; userId: string };
 
   try {
     messageBody = JSON.parse(event.body || '{}');
   } catch {
-    await postToConnection(connectionId, JSON.stringify({ type: 'error', error: 'Invalid message format' }));
+    await postToConnection(endpoint, connectionId, JSON.stringify({ type: 'error', error: 'Invalid message format' }));
     return { statusCode: 400, body: 'Invalid message format' };
   }
 
   const { sessionId, message, orgId, userId } = messageBody;
 
   if (!sessionId || !message) {
-    await postToConnection(connectionId, JSON.stringify({ type: 'error', error: 'sessionId and message are required' }));
+    await postToConnection(endpoint, connectionId, JSON.stringify({ type: 'error', error: 'sessionId and message are required' }));
     return { statusCode: 400, body: 'sessionId and message are required' };
   }
 
@@ -378,7 +393,7 @@ async function handleWebSocketMessage(connectionId: string, event: APIGatewayPro
   }
 
   if (!resolvedOrgId || !resolvedUserId) {
-    await postToConnection(connectionId, JSON.stringify({ type: 'error', error: 'Unable to identify user' }));
+    await postToConnection(endpoint, connectionId, JSON.stringify({ type: 'error', error: 'Unable to identify user' }));
     return { statusCode: 403, body: 'Unable to identify user' };
   }
 
@@ -389,12 +404,12 @@ async function handleWebSocketMessage(connectionId: string, event: APIGatewayPro
   const session = await getItem<RoleplaySessionRecord>(pk, sk);
 
   if (!session) {
-    await postToConnection(connectionId, JSON.stringify({ type: 'error', error: 'Session not found' }));
+    await postToConnection(endpoint, connectionId, JSON.stringify({ type: 'error', error: 'Session not found' }));
     return { statusCode: 404, body: 'Session not found' };
   }
 
   if (session.status !== 'active') {
-    await postToConnection(connectionId, JSON.stringify({ type: 'error', error: 'Session is not active' }));
+    await postToConnection(endpoint, connectionId, JSON.stringify({ type: 'error', error: 'Session is not active' }));
     return { statusCode: 400, body: 'Session is not active' };
   }
 
@@ -412,7 +427,7 @@ async function handleWebSocketMessage(connectionId: string, event: APIGatewayPro
   const userContent = buildConversationContext(updatedMessages);
 
   // Notify client that streaming is starting
-  await postToConnection(connectionId, JSON.stringify({ type: 'stream_start', sessionId }));
+  await postToConnection(endpoint, connectionId, JSON.stringify({ type: 'stream_start', sessionId }));
 
   // 4. Invoke Bedrock streaming
   let fullResponse = '';
@@ -429,7 +444,7 @@ async function handleWebSocketMessage(connectionId: string, event: APIGatewayPro
     // 5. For each chunk, post back to WebSocket
     for await (const chunk of streamGenerator) {
       fullResponse += chunk;
-      await postToConnection(connectionId, JSON.stringify({
+      await postToConnection(endpoint, connectionId, JSON.stringify({
         type: 'stream_chunk',
         sessionId,
         chunk,
@@ -437,7 +452,7 @@ async function handleWebSocketMessage(connectionId: string, event: APIGatewayPro
     }
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Streaming failed';
-    await postToConnection(connectionId, JSON.stringify({ type: 'error', error: errorMessage }));
+    await postToConnection(endpoint, connectionId, JSON.stringify({ type: 'error', error: errorMessage }));
     return { statusCode: 500, body: errorMessage };
   }
 
@@ -455,7 +470,7 @@ async function handleWebSocketMessage(connectionId: string, event: APIGatewayPro
   });
 
   // Notify client that streaming is complete
-  await postToConnection(connectionId, JSON.stringify({
+  await postToConnection(endpoint, connectionId, JSON.stringify({
     type: 'stream_end',
     sessionId,
     messageCount: finalMessages.length,
@@ -648,16 +663,17 @@ function buildConversationContext(messages: RoleplayMessage[]): string {
 
 /**
  * Post a message to a WebSocket connection.
+ * The endpoint is derived from the WebSocket event's requestContext at runtime.
  */
-async function postToConnection(connectionId: string, data: string): Promise<void> {
-  if (!WEBSOCKET_CALLBACK_URL) {
+async function postToConnection(endpoint: string, connectionId: string, data: string): Promise<void> {
+  if (!endpoint) {
     return;
   }
 
   const { ApiGatewayManagementApiClient, PostToConnectionCommand } = await getWsClientModule();
 
   const client = new ApiGatewayManagementApiClient({
-    endpoint: WEBSOCKET_CALLBACK_URL,
+    endpoint,
   });
 
   try {

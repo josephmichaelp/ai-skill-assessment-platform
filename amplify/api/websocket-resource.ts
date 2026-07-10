@@ -107,6 +107,16 @@ export class PlatformWebSocketApi extends Construct {
     // ─────────────────────────────────────────────────────────────────────────
     // Grant roleplay handler permission to manage WebSocket connections
     // (push messages back to connected clients via @connections API)
+    //
+    // NOTE: We intentionally use a wildcard resource ARN here (not referencing
+    // this.webSocketApi.apiId) to avoid a cross-stack circular dependency.
+    // The WebSocket API stack already depends on the roleplay handler (as its
+    // integration target); referencing the API id here would create the reverse
+    // dependency (Functions -> WebSocket) and produce a CloudFormation cycle.
+    //
+    // The Lambda derives the actual @connections endpoint at runtime from the
+    // WebSocket event's requestContext (domainName + stage), so no env var is
+    // needed either.
     // ─────────────────────────────────────────────────────────────────────────
 
     roleplayHandler.addToRolePolicy(
@@ -114,26 +124,9 @@ export class PlatformWebSocketApi extends Construct {
         effect: iam.Effect.ALLOW,
         actions: ['execute-api:ManageConnections'],
         resources: [
-          cdk.Fn.join('', [
-            'arn:aws:execute-api:',
-            cdk.Stack.of(this).region,
-            ':',
-            cdk.Stack.of(this).account,
-            ':',
-            this.webSocketApi.apiId,
-            '/',
-            this.webSocketStage.stageName,
-            '/POST/@connections/*',
-          ]),
+          `arn:aws:execute-api:${cdk.Stack.of(this).region}:${cdk.Stack.of(this).account}:*/*/POST/@connections/*`,
         ],
       }),
-    );
-
-    // Pass the WebSocket callback URL as environment variable to the roleplay handler
-    // so it can post messages back to connected clients
-    (roleplayHandler as lambda.Function).addEnvironment(
-      'WEBSOCKET_CALLBACK_URL',
-      this.webSocketStage.callbackUrl,
     );
   }
 }
