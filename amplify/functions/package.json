@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@aws-sdk/client-apigatewaymanagementapi": "^3.1084.0",
+    "@aws-sdk/client-apigatewaymanagementapi": "^3.650.0",
     "@aws-sdk/client-bedrock-runtime": "^3.650.0",
     "@aws-sdk/client-dynamodb": "^3.650.0",
     "@aws-sdk/client-s3": "^3.650.0",
