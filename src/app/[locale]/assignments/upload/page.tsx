@@ -72,9 +72,8 @@ export default function AssignmentUploadPage() {
     setFiles(selectedFiles);
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleFileUploadChange = ({ detail }: { detail: any }) => {
-    handleFileChange(detail.value as File[]);
+  const handleFileUploadChange = ({ detail }: { detail: { value: File[] } }) => {
+    handleFileChange(detail.value);
   };
 
   const handleUpload = async () => {
